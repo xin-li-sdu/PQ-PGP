@@ -1,6 +1,6 @@
 # 基于格密码和密钥复用的后量子邮件加密系统
 
-本项目库为SDU2023创新创业实践课100组同学在课程期间，参加信安赛所完成的项目，本md文件仅介绍项目完成工作/创新点/编译方法部分，详细原理及证明见附件[基于格密码和密钥复用的后量子邮件加密系统](https://github.com/Maxlsc/Projects-of-CSPIE/tree/main/Email%20encryption%20system%20based%20on%20post%20quantum%20cryptography%20and%20key%20reuse/src/Report.pdf)
+详细原理及证明见附件[基于格密码和密钥复用的后量子邮件加密系统](https://github.com/Maxlsc/Projects-of-CSPIE/tree/main/Email%20encryption%20system%20based%20on%20post%20quantum%20cryptography%20and%20key%20reuse/src/Report.pdf)
 
 ## 本作品的工作
 
@@ -87,10 +87,10 @@ MNTRU格上的IBE可以在512维的多项上实现142bits安全，且相较于�
 
 ## 软件效果预览
 
-本项目除实现高效的后端代码外，还针对windows系统编写了用户友好，功能强大，易于操作且稳定性好的软件前端界面。
+本项目除实现高效的后端代码外，还针对windows系统编写易于操作的软件前端界面。
 
 
-由于可执行文件过大，无法上传至github，故提供视频演示（审阅老师可下载本项目源码并验证功能）
+由于可执行文件过大，无法上传至github，故提供视频演示
 
 
 https://github.com/Maxlsc/Projects-of-CSPIE/assets/40687850/e95bd977-df4b-4074-adf8-b8cee52a79b9
