@@ -10,6 +10,7 @@ public:
     explicit Voronoi(QObject *parent = nullptr);
 
     Q_INVOKABLE void test();//成员函数
+     Q_INVOKABLE void tDigest();//成员函数
     Q_INVOKABLE double add(double x, double y);//成员函数
 };
 

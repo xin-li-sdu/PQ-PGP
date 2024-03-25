@@ -64,5 +64,6 @@
         <file>controls/FluTextBox.qml</file>
         <file>controls/FluTextBoxBackground.qml</file>
         <file>controls/FluAutoSuggestBox.qml</file>
+        <file>controls/FluTour.qml</file>
     </qresource>
 </RCC>

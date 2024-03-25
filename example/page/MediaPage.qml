@@ -1,18 +1,36 @@
 ﻿import QtQuick
-import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Controls
 import FluentUI
 import encsign
-//左下角密钥生成的显示界面.
+import QtQuick.Dialogs
+//该页为ID查询
 FluWindow {
+//FluContentPage
+//{
 
-    width: 300
-    height: 300
-    minimumWidth: 300
-    minimumHeight:300
+    //leftPadding:10
+    //rightPadding:10
+    //bottomPadding:20
+    FluAppBar
+    {
+        id:appbar
+        title:"已注册ID查询"
+        width:parent.width
+    }
+    width: 480
+    height: 400
+    //minimumWidth: 500
+   // minimumHeight: 600
 
-    title:"pk"
+    title:"ID查询"
 
+    /*onInitArgument:
+        (argument)=>{
+            scrollview.focus = true
+        }
+*/
+    //ChatController
     ENC_SIGN
     {
         id:controller
@@ -24,12 +42,94 @@ FluWindow {
         }
     }
 
-    FluAppBar
+
+    Item
     {
-        id:appbar
-        title:"PK"
-        width:parent.width
+        id:layout_bottom
+        height: 150
+        anchors{
+            bottom: parent.bottom
+            bottomMargin: 30
+            left: parent.left
+            right: parent.right
+            leftMargin: 10
+            rightMargin: 10
+
+        }
+
+        }
+//        ScrollView   ///输入框
+//        {
+//            id:scrollview1
+//            anchors{
+//                //bottom: parent.bottom
+//                bottom: button_send.top
+//                left: parent.left
+//                //right: button_send.left
+//                right: parent.right
+//                bottomMargin: 10
+//                leftMargin: 10
+//                rightMargin: 10
+//            }
+//            height: Math.min(textbox_code.implicitHeight,400)//64
+//            FluMultilineTextBox
+//            {
+//                Layout.preferredHeight: 100
+//                Layout.preferredWidth: 200
+//                id:textbox_code
+//                focus:true
+//                placeholderText: "email\n\n\n\n\n\n\n"
+//            }
+
+//        }
+        FluFilledButton//按钮的操作
+        {
+            id:button_send
+            text:controller.isLoading ? timer_loading.loadingText :"查询"
+            anchors
+            {
+                bottom: parent.bottom
+                right: parent.right
+                left: parent.left
+                leftMargin: 120
+                rightMargin: 120
+                bottomMargin:20
+
+            }
+            width: 60
+            height:40
+           // disabled: controller.isLoading
+            onClicked://点击的作用
+            {
+
+                var text_code = "text"//获得他的文本
+              //  appendMessage(true,text)//给这个txt做了什么处理？
+                //controller.sendMessage("none",text_code,"search")//发送给谁这个文本
+                controller.idfind()
+                showSuccess("ID查询成功")
+               // textbox.clear()//发送完清空文本
+
+            }
+  }
+
+
+
+    ListModel
+    {
+        id:model_message
+       /* ListElement
+        {
+            isMy:false
+            text:"密文："
+        }
+        ListElement
+        {
+            isMy:true
+            text:"2"
+        }*/
     }
+
+
 
     Component
     {
@@ -37,7 +137,7 @@ FluWindow {
         TextEdit
         {
             id:item_text
-            text: "message"
+            text: message
             wrapMode: Text.WrapAnywhere
             readOnly: true
             selectByMouse: true
@@ -51,8 +151,15 @@ FluWindow {
                     return FluTheme.primaryColor.dark
                 }
             }
-           // width: Math.min(list_message.width-200,600,implicitWidth)
-            width:30
+            width: Math.min(list_message.width,600,implicitWidth)
+            TapHandler
+            {
+                acceptedButtons: Qt.RightButton
+                onTapped:
+                {
+                    menu_item.showMenu(item_text.selectedText)
+                }
+            }
         }
     }
 
@@ -65,14 +172,19 @@ FluWindow {
             left: parent.left
             right: parent.right
             //bottom: layout_bottom.top
-            margins: 10
+            //bottom: scrollview1.top
+            bottom: button_send.top
+            bottomMargin: 40
+             rightMargin: 30
+              leftMargin: 30
+            //margins: 10
         }
         color: FluTheme.dark ? Qt.rgba(39/255,39/255,39/255,1) : Qt.rgba(245/255,245/255,245/255,1)
         ListView
         {
             id:list_message
             anchors.fill: parent
-            //model:model_message
+            model:model_message
             clip: true
             ScrollBar.vertical: FluScrollBar {}
             preferredHighlightBegin: 0
@@ -122,7 +234,8 @@ FluWindow {
                     radius: 3
                     anchors{//左还是右
                         top: item_avatar.top
-                        right: isMy ? item_avatar.left : undefined
+                        left: parent.left
+                        right: parent.right
 
                         rightMargin: isMy ? 10 : undefined
                         //left: isMy ? undefined : item_avatar.right+50//加
@@ -150,6 +263,39 @@ FluWindow {
         }
     }
 
+
+    //FluArea
+    //从这拿走了
+
+
+
+            Timer{
+                id:timer_loading
+                property int count : 0
+                property string loadingText : ""
+                interval: 500
+                running: controller.isLoading
+                repeat: true
+                onTriggered: {
+                    switch(count%3){
+                    case 0:
+                        loadingText = "."
+                        break
+                    case 1:
+                        loadingText = ".."
+                        break
+                    case 2:
+                        loadingText = "..."
+                        break
+                    default:
+                        loadingText = ""
+                        break
+                    }
+                    count++
+                }
+            }
+
+
     FluMenu{
         id:menu_item
         focus: false
@@ -165,6 +311,12 @@ FluWindow {
             menu_item.selectedText = text
             menu_item.popup()
         }
+    }
+
+    function appendMessage(isMy,text)//判断是不是我发送的，找到这个函数了，用户或后端
+    {
+        model_message.append({isMy:isMy,text:text})
+        list_message.positionViewAtEnd()
     }
 
 }

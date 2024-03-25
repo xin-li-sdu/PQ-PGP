@@ -7,17 +7,17 @@ FluObject{
     id:footer_items
     FluPaneItemSeparator{}
     FluPaneItem{
-        title:"已生成密钥查询"
+        title:"我的公钥"
         onTap:{
              FluApp.navigate("/login")
         }
     }
-//    FluPaneItem{
-//        title:"意见反馈"
-//        onTap:{
-//            Qt.openUrlExternally("tencent://message/?uin=2635410120&Site=&Menu=yes")
-//        }
-//    }
+    FluPaneItem{
+        title:"已注册ID查询"
+        onTap:{
+             FluApp.navigate("/media")
+        }
+    }
     FluPaneItem{
         title:"关于"
         onTap:{

@@ -165,5 +165,7 @@
         <file>page/keygen.qml</file>
         <file>res/image/center.png</file>
         <file>res/image/logo2.png</file>
+        <file>page/send_enc.qml</file>
+        <file>page/dec_get.qml</file>
     </qresource>
 </RCC>

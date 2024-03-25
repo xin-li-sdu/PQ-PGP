@@ -27,6 +27,7 @@ GNTRU_MSK_Data * GNTRU_MSKD ;
 GNTRU_MPK_Data * GNTRU_MPKD ;
 char MPK1[10000];
 char rMPK[10000];
+std::string m_id;
 int test;
 QMap<QString, QVariant> properties(){
     QMap<QString, QVariant> map;
@@ -37,8 +38,7 @@ QMap<QString, QVariant> properties(){
 char msk='0';
 int main(int argc, char *argv[])
 {
-    test=0;
-    srand((unsigned)time(NULL));
+
 //    QCoreApplication::setOrganizationName("xin-li-sdu");
 //    QCoreApplication::setOrganizationDomain("https://");
 //    QCoreApplication::setApplicationName("PGP-TEST");
@@ -80,7 +80,10 @@ int main(int argc, char *argv[])
 //    Api_Keygen(GNTRU_MPKD, GNTRU_MSKD, MPK1);
     //--------将keygen放到主线程之外-------//
             ZZ_p::init(q1);
+            test=0;
+
             ApiKeygenThread *apiKeygenThread = new ApiKeygenThread();
+            srand((unsigned)time(NULL));
             QThread *thread = new QThread();
             apiKeygenThread->moveToThread(thread);
             ApiKeygenThread::connect(thread, SIGNAL(started()), apiKeygenThread, SLOT(run()));

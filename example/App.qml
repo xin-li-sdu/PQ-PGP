@@ -31,7 +31,7 @@ Window {
     id: app
     color: "#00000000"
     Timer {
-        interval: 6000  // 设置6秒的时间间隔
+        interval: 60  // 设置6秒(6000)的时间间隔
         running: true
         onTriggered:
         {

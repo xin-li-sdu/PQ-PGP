@@ -5,6 +5,7 @@ import QtQuick.Window
 import FluentUI
 import QtCharts
 
+
 //FluScrollablePage{
 FluContentPage
 {
@@ -12,10 +13,16 @@ FluContentPage
     Rectangle
     {
     Row{
+
+
+
       Item{
         width: 300
         height: 340
         id:table1
+
+
+
            ChartView {
             title: "曲线图"
             anchors.fill: parent
@@ -34,23 +41,23 @@ FluContentPage
         }
 
     }
-    Item {
-        id:table2
-        width:300
-        height:340
-        ChartView {
-            title:"条状图"
-            anchors.fill:parent
-            antialiasing:true
-            legend.alignment:Qt.AlignBottom
-            BarSeries {
-                axisX:BarCategoryAxis{categories:["2007","2008","2009","2010","2011","2012"]}
-                id:barseries
-                BarSet {label:"Bob";values:[2,2,3,4,5,6]}
-                BarSet {label:"Susan";values:[2,1,2,4,1,7]}
-                BarSet {label:"James";values:[2,5,8,13,5,8]}
+        Item {
+            id:table2
+            width:300
+            height:340
+            ChartView {
+                title:"条状图"
+                anchors.fill:parent
+                antialiasing:true
+                legend.alignment:Qt.AlignBottom
+                BarSeries {
+                    axisX:BarCategoryAxis{categories:["2007","2008","2009","2010","2011","2012"]}
+                    id:barseries
+                    BarSet {label:"Bob";values:[2,2,3,4,5,6]}
+                    BarSet {label:"Susan";values:[2,1,2,4,1,7]}
+                    BarSet {label:"James";values:[2,5,8,13,5,8]}
+                }
             }
-        }
     }
 
 }

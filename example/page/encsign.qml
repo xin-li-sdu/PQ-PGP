@@ -72,7 +72,7 @@ FluContentPage
                 Layout.topMargin: 20
                 id:textbox
                 focus:true
-                placeholderText: "reciver's pk\n\n\n"
+                placeholderText: "reciver's pk or reciver's ID\n\n\n"
 
             }
 
@@ -131,7 +131,6 @@ FluContentPage
                 var text_code = textbox_code.text//获得他的文本
               //  appendMessage(true,text)//给这个txt做了什么处理？
                 controller.sendesMessage(text,text_code)//发送给谁这个文本
-
                // textbox.clear()//发送完清空文本
                 }
             }

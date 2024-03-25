@@ -1,5 +1,5 @@
-#ifndef A_H
-#define A_H
+//#ifndef A_H
+//#define A_H
 #include <QtCore>
 #include <QObject>
 #include <QNetworkAccessManager>
@@ -40,7 +40,11 @@ public:
     Q_INVOKABLE int senddecvfyMessage(const QString& text,const QString& text_code);//回传函数
     Q_INVOKABLE bool sendesMessage(const QString& text,const QString& text_code);//回传函数
     Q_INVOKABLE bool sendbase64Message(const QString& text,const QString& text_code,const QString& text_mpk);//basetest
+    Q_INVOKABLE void sendemail(const QString& message,const QString& address,const QString& key);//发送邮件
+    Q_INVOKABLE int emailget(const QString& address,const QString& key);
     Q_INVOKABLE void clipText(const QString& text);
+    Q_INVOKABLE bool idfind();
+
 private:
     QJsonObject createMessage(const QString& role,const QString& content);
 
@@ -62,6 +66,7 @@ signals:
 public slots:
     void run()
     {
+        srand((unsigned)time(NULL));
         GNTRU_MSKD = new GNTRU_MSK_Data;
         GNTRU_MPKD = new GNTRU_MPK_Data;
         memset(MPK1, 0, 10000);
@@ -72,5 +77,5 @@ public slots:
 //------多线程---------///////
 
 
-#endif // A_H
+//#endif // A_H
 

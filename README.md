@@ -87,26 +87,6 @@ MNTRU格上的IBE可以在512维的多项上实现142bits安全，且相较于�
 
 ## 软件效果预览
 
-本项目除实现高效的后端代码外，还针对windows系统编写易于操作的软件前端界面。
+![image-20240325201719107](README.assets/image-20240325201719107.png)
 
-
-由于可执行文件过大，无法上传至github，故提供视频演示
-
-
-https://github.com/Maxlsc/Projects-of-CSPIE/assets/40687850/e95bd977-df4b-4074-adf8-b8cee52a79b9
-
-
-
-以下为使用截图：
-
-![1](https://user-images.githubusercontent.com/40687850/233790089-72588769-8752-48e0-be95-1123e0ad4dce.png)
-![2](https://user-images.githubusercontent.com/40687850/233790092-f611f0a4-3947-4b9d-9150-0b657ae06820.jpg)
-![3](https://user-images.githubusercontent.com/40687850/233790093-eee6453c-4044-4479-ba78-b670a56b3336.jpg)
-![4](https://user-images.githubusercontent.com/40687850/233790094-1a223dd9-dbe9-45dd-9e68-45c75f60ed7b.jpg)
-![5](https://user-images.githubusercontent.com/40687850/233790096-0521b276-d331-49b6-b462-979476804075.jpg)
-![6](https://user-images.githubusercontent.com/40687850/233790098-3df81015-a9a2-4bc4-b4c5-d1c4ea5f7eed.png)
-![7](https://user-images.githubusercontent.com/40687850/233790099-b1c7893c-24ef-441a-b9d0-727b63ab80a4.jpg)
-![8](https://user-images.githubusercontent.com/40687850/233790101-dea71945-eae2-47dc-9a41-7709adadc289.jpg)
-![9](https://user-images.githubusercontent.com/40687850/233790103-dce93aea-484f-4a89-b0f5-aec78fb78d56.jpg)
-![10](https://user-images.githubusercontent.com/40687850/233790106-79319c6b-33c1-4834-8789-ba07fe774a92.jpg)
-![11](https://user-images.githubusercontent.com/40687850/233790109-66baa799-9877-4064-a575-10a0e21d0295.jpg)
+![image-20240325201823747](README.assets/image-20240325201823747.png)

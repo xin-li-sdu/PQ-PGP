@@ -72,7 +72,7 @@ FluContentPage
                 Layout.topMargin: 20
                 id:textbox
                 focus:true
-                placeholderText: "reciver's pk\n\n\n"
+                placeholderText: "reciver's pk or reciver's ID\n\n\n"
 
             }
 
@@ -117,7 +117,7 @@ FluContentPage
             {
                 if(textbox.text === "")
                 {
-                    showWarning("reciver's pk不能为空")
+                    showWarning("reciver's pk or reciver's ID不能为空")
                     return
                 }
                 else if(textbox_code.text === "")

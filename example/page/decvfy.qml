@@ -127,8 +127,8 @@ FluContentPage
                 }
                 else
                 {
-                var text = textbox.text//获得他的文本
-                var text_code = textbox_code.text//获得他的文本
+                var text = textbox.text//获得公钥的文本
+                var text_code = textbox_code.text//获得明文的文本
               //  appendMessage(true,text)//给这个txt做了什么处理？
                 var test=controller.senddecvfyMessage(text,text_code)
                 if(test===0)//发送给谁这个文本

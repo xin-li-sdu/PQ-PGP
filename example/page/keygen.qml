@@ -73,7 +73,7 @@ FluContentPage
                 Layout.preferredWidth: 200
                 id:textbox_code
                 focus:true
-                placeholderText: "email\n\n\n\n\n\n\n"
+                placeholderText: "your email\n(If you want to use the built-in email sending function, this email must be a 163 email address)\n\n\n\n\n\n"
             }
 
         }
@@ -103,7 +103,7 @@ FluContentPage
                 }
                 else
                 {
-                var text_code = textbox_code.text//获得他的文本
+                var text_code = textbox_code.text//邮箱
               //  appendMessage(true,text)//给这个txt做了什么处理？
                 controller.sendMessage("none",text_code,"keygen")//发送给谁这个文本
                 showSuccess("密钥生成成功")

@@ -16,11 +16,10 @@ FluScrollablePage
         id:model_header
         ListElement{
             //icon:"qrc:/res/image/logo2"
-            icon:  "qrc:/res/image/control/ColorPaletteResources.png"
+           icon:  "qrc:/res/image/control/ColorPaletteResources.png"
             title:"作品报告"
             desc:"访问作品报告链接——后量子时代的PGP"
-            //url:"https://www.sdu.edu.cn/"
-            url:"https://gitee.com/axindecangku/123/raw/master/1.pdf"
+            url:"https://www.sdu.edu.cn/"
         }
 
     }

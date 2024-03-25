@@ -6,7 +6,7 @@ import FluentUI
 
 FluScrollablePage{
 
-    title:"MediaPlayer"
+    title:"操作视频"
     leftPadding:10
     rightPadding:10
     bottomPadding:20
@@ -31,7 +31,9 @@ FluScrollablePage{
             }
             FluMediaPlayer{
                 id:player
-                source:"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+               // source:"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+                 // source:"qrc:/res/video/2.mp4"
+                source:"https://user-images.githubusercontent.com/40687850/244873119-d4c34726-a58e-402a-8e83-6cc2c1a573b3.mp4"
             }
         }
     }
@@ -43,10 +45,10 @@ FluScrollablePage{
         paddings: 10
 
         FluButton{
-            text:"跳转到视频播放器窗口"
+            text:"在播放器打开操作视频"
             anchors.verticalCenter: parent.verticalCenter
             onClicked:{
-                FluApp.navigate("/media",{source:"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"})
+                FluApp.navigate("/media",{source:"https://user-images.githubusercontent.com/40687850/244873119-d4c34726-a58e-402a-8e83-6cc2c1a573b3.mp4"})
             }
         }
 

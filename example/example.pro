@@ -24,6 +24,7 @@ HEADERS += \
     base64.h \
     convert.h \
     csprng.hpp \
+    fileread.h \
     fips202.h \
     io.h \
     lest.hpp \
@@ -32,7 +33,8 @@ HEADERS += \
     phantom_machine.hpp \
     phantom_memory.hpp \
     phantom_types.hpp \
-    randombytes.h
+    randombytes.h \
+    smtp.h
 
 SOURCES += \
         Algebra.cc \
@@ -52,10 +54,12 @@ SOURCES += \
         convert.cc \
         csprng.cc \
         fips202.cc \
+        flieread.cpp \
         io.cc \
         main.cpp \
         randombytes.cc \
-        testcode.cpp
+        smtp.cpp
+
 
 RESOURCES += qml.qrc
 include($$PWD/gsl/gsl.pri)

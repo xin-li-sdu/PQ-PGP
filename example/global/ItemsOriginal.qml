@@ -60,6 +60,7 @@ FluObject{
             navigationView.push("qrc:/page/enc.qml")
             }
            }
+
         FluPaneItem
         {
             title:"签名"
@@ -125,19 +126,37 @@ FluObject{
 
 
 
-//   FluPaneItemExpander
-//{
-//        title:"Popus"
-//        icon:FluentIcons.ButtonMenu
-//        FluPaneItem
-//        {
-//            title:"Dialog"
-//            onTap:{
-//                navigationView.push("qrc:/T_Dialog.qml")
-//            }
-//        }
-
-//    }
+   FluPaneItemExpander
+{
+        title:"内置邮箱"
+        icon:FluentIcons.ButtonMenu
+        FluPaneItem
+        {
+            image:"qrc:/res/image/control/ContentDialog.png"
+            desc:"一键完成邮件编辑-加密-发送全流程."
+            recentlyAdded:true
+            order:2
+            title:"邮件加密并发送"
+            icon:FluentIcons.ProtectedDocument
+            onTap:
+            {
+            navigationView.push("qrc:/page/send_enc.qml")
+            }
+           }
+        FluPaneItem
+        {
+            image:"qrc:/res/image/control/Flyout.png"
+            desc:"一键完成邮件接收-解码-解密全流程."
+            recentlyAdded:true
+            order:1
+            title:"邮件接收并解密"
+            icon:FluentIcons.ProtectedDocument
+            onTap:
+            {
+            navigationView.push("qrc:/page/dec_get.qml")
+            }
+           }
+    }
 
 //    FluPaneItemExpander{
 //        title:"功能测试"
@@ -155,7 +174,7 @@ FluObject{
 //            }
 //        }
 //        FluPaneItem{
-//            title:"进度条"
+//            title:"文件测试"
 //           // icon:FluentIcons.AllApps
 //            image:"qrc:/res/image/control/TabView.png"
 //            recentlyAdded:true
@@ -163,6 +182,17 @@ FluObject{
 //            desc:"This is a meaningless English paragraph. "
 //            onTap:{
 //                navigationView.push("qrc:/T_Progress.qml")
+//            }
+//        }
+//        FluPaneItem{
+//            icon:FluentIcons.Media
+//            title:"视频演示"
+//            image:"qrc:/res/image/control/MediaPlayerElement.png"
+//            recentlyAdded:true
+//            order:0
+//            desc:"软件操作演示视频."
+//            onTap:{
+//                navigationView.push("qrc:/T_MediaPlayer.qml")
 //            }
 //        }
 //      }
@@ -211,21 +241,8 @@ FluObject{
 //        }
 //    }
 
-   /* FluPaneItemExpander{
-        title:"Media"
-        icon:FluentIcons.Media
-        FluPaneItem{
-            title:"MediaPlayer"
-            image:"qrc:/res/image/control/MediaPlayerElement.png"
-            recentlyAdded:true
-            order:0
-            desc:"A control to display video and image content."
-            onTap:{
-                navigationView.push("qrc:/T_MediaPlayer.qml")
-            }
-        }
-    }
-*/
+
+
     function getRecentlyAddedData(){
         var arr = []
         for(var i=0;i<children.length;i++)
