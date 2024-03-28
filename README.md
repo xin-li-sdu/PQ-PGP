@@ -1,5 +1,7 @@
 # 基于格密码和密钥复用的后量子邮件加密系统
 
+[Chinese]([PQ-PGP/README.md at main · xin-li-sdu/PQ-PGP (github.com)](https://github.com/xin-li-sdu/PQ-PGP/blob/main/README.md))，[English](([PQ-PGP/README.md at main · xin-li-sdu/PQ-PGP (github.com)](https://github.com/xin-li-sdu/PQ-PGP/blob/main/english.md))
+
 详细原理及证明见附件[基于格密码和密钥复用的后量子邮件加密系统](https://github.com/Maxlsc/Projects-of-CSPIE/tree/main/Email%20encryption%20system%20based%20on%20post%20quantum%20cryptography%20and%20key%20reuse/src/Report.pdf)
 
 ## 本作品的工作
