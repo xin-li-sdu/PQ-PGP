@@ -87,7 +87,7 @@ MNTRU格上的IBE可以在512维的多项上实现142bits安全，且相较于�
 | 编译器   | MSVC2019    |
 | QT版本   | 6.4.3       |
 
-注：由于环境问题，本项目所需的openssl和NTL库已经预编译并集成在项目文件中，不需要额外编译
+注：由于环境问题，本项目所需的openssl库已经预编译并集成在项目文件中，不需要额外编译。NTL库参考[NTL.dll](https://github.com/xin-li-sdu/QT-and-Dynamic-Link-Library/tree/main/NTL-dll/gsl/bin)
 
 ## 软件效果预览
 
