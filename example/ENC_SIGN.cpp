@@ -28,11 +28,11 @@ void sendmessge(const std::string& str, char* c,char* key)//发送邮件
     const char* cstr = str.c_str();//id
     const char* mstr = m_id.c_str();//mid
 
-    //Smtp smtp("lixinsdrz@163.com", key);//"UFXVPPQXXXMFLHJL"
-     Smtp smtp(mstr, key);//"UFXVPPQXXXMFLHJL"
+    //Smtp smtp("lixinsdrz@163.com", key);//"UFXXXXXXXMFLHJL"
+     Smtp smtp(mstr, key);//"UFXXXXXXXMFLHJL"
     //strcat(c,"< encrypt by PQPGP>");
     smtp.sendem(cstr, "email encrypt by PQPGP",c);
-    //smtp.sendem("2635410120@qq.com", "email encrypt by PQPGP",c);
+    //smtp.sendem("26XXXXXX20@qq.com", "email encrypt by PQPGP",c);
 }
 bool ENC_SIGN::sendbase64Message(const QString& text,const QString& text_code,const QString& text_mpk)//base64测试函数
 {
@@ -354,7 +354,7 @@ int ENC_SIGN::emailget(const QString& address,const QString& key)
 
         // USER
         memset(buf,0,50000);
-        sprintf(buf,"%s\r\n","user lixinsdrz@163.com");//输入你的邮箱账号
+        sprintf(buf,"%s\r\n","user liXXXXXdrz@163.com");//输入你的邮箱账号
         //sprintf(buf,"%s\r\n","user "+address);//输入你的邮箱账号
         send(sockfd,buf,strlen(buf),0);
         //cout<<buf<<endl;
@@ -363,7 +363,7 @@ int ENC_SIGN::emailget(const QString& address,const QString& key)
         cout<<rbuf<<endl;
 
         // PASSWORD
-        sprintf(buf,"%s\r\n","pass UFXVPPQXXXMFLHJL");//你的邮箱密码
+        sprintf(buf,"%s\r\n","pass UFXXXXXXXXXLHJL");//你的邮箱密码
         send(sockfd,buf,strlen(buf),0);
         //cout<<buf<<endl;
         memset(rbuf,0,50000);
