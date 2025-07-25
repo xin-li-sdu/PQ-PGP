@@ -1,6 +1,6 @@
 # 基于格密码和密钥复用的后量子邮件加密系统
 
-[Chinese](https://github.com/xin-li-sdu/PQ-PGP/blob/main/README.md)，[English](https://github.com/xin-li-sdu/PQ-PGP/blob/main/english.md)
+[Chinese](https://github.com/axin0X/PQ-PGP/blob/main/README.md)，[English](https://github.com/axin0X/PQ-PGP/blob/main/english.md)
 
 详细原理及证明见附件[基于格密码和密钥复用的后量子邮件加密系统](https://github.com/Maxlsc/Projects-of-CSPIE/tree/main/Email%20encryption%20system%20based%20on%20post%20quantum%20cryptography%20and%20key%20reuse/src/Report.pdf)
 
@@ -87,7 +87,7 @@ MNTRU格上的IBE可以在512维的多项上实现142bits安全，且相较于�
 | 编译器   | MSVC2019    |
 | QT版本   | 6.4.3       |
 
-注：由于环境问题，本项目所需的openssl库已经预编译并集成在项目文件中，不需要额外编译。NTL库参考[NTL.dll](https://github.com/xin-li-sdu/QT-and-Dynamic-Link-Library/tree/main/NTL-dll/gsl/bin)
+注：由于环境问题，本项目所需的openssl库已经预编译并集成在项目文件中，不需要额外编译。NTL库参考[NTL.dll](https://github.com/axin0X/QT-and-Dynamic-Link-Library/tree/main/NTL-dll/gsl/bin)
 
 ## 软件效果预览
 
